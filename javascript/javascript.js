@@ -6,10 +6,16 @@ function getComputerChoice(random) {
   
   
 function playerSelection(input) {
-    
      let selection = input.toLowerCase();
-    return selection;
+
+     if (selection === "rock") {
+        return 1;
+     } else if ( selection === "paper") {
+        return 2;
+     } else ( selection === "scissors") 
+        return 3; 
 
 }
 
+console.log(playerSelection("rock"))
 
