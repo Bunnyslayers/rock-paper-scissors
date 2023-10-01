@@ -1,9 +1,16 @@
 
 function getComputerChoice(random) {
     random = Math.floor( Math.random() * 3) + 1;
-    return random;
+        
+    if (random === 1) {
+        return "rock";
+    } else if (random === 2) {
+        return "paper";
+    } else ( random === 3) 
+        return "scissors";
+
 }
-  
+  console.log(getComputerChoice())
 
 
 // function playerSelection(input) {
@@ -19,4 +26,5 @@ function getComputerChoice(random) {
 // }
 
 
-
+const playerSelection = "Rock";
+const computerChoice = getComputerChoice;
