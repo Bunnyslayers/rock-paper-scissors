@@ -1,4 +1,9 @@
 
+const choice = prompt("Chose your fighter . . . rock, paper , scissors!").toLowerCase();
+const playerSelection = choice;
+const computerChoice = getComputerChoice();
+
+
 function getComputerChoice(random) {
     random = Math.floor( Math.random() * 3) + 1;
         
@@ -10,12 +15,6 @@ function getComputerChoice(random) {
         return "scissors";
 
 }
-
-const choice = prompt("Chose your fighter . . . rock, paper , scissors!").toLowerCase();
-const playerSelection = choice;
-const computerChoice = getComputerChoice();
-
-
 
 function singleGame () {
     if (playerSelection === computerChoice) {
