@@ -1,4 +1,13 @@
 
+
+const choice = prompt("Chose your fighter . . . rock, paper , scissors!");
+const playerSelection = choice;
+const computerChoice = getComputerChoice();
+
+
+
+
+
 function getComputerChoice(random) {
     random = Math.floor( Math.random() * 3) + 1;
         
@@ -12,30 +21,9 @@ function getComputerChoice(random) {
 }
 
 
-// function playerSelection(input) {
-//      let selection = input.toLowerCase();
-
-//      if (selection === "rock") {
-//         return 1;
-//      } else if ( selection === "paper") {
-//         return 2;
-//      } else ( selection === "scissors") 
-//         return 3; 
-
-// }
-
-
-const playerSelection = "scissors";
-const computerChoice = getComputerChoice();
-
-
-
-
 
 
 function singleGame () {
-   
-
     if (playerSelection === computerChoice) {
         return "Damn yall tied . . . go ahead and kiss!";
     } else if ((playerSelection === "rock") && (computerChoice === "paper")) {
@@ -51,5 +39,6 @@ function singleGame () {
     } else ((playerSelection === "paper") && (computerChoice === "scissors")) 
         return "Damn you lost. . . Scissors beats paper buddy!"
 }
+
 
 console.log(singleGame())
