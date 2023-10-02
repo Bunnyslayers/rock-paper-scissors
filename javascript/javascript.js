@@ -1,13 +1,4 @@
 
-
-const choice = prompt("Chose your fighter . . . rock, paper , scissors!");
-const playerSelection = choice;
-const computerChoice = getComputerChoice();
-
-
-
-
-
 function getComputerChoice(random) {
     random = Math.floor( Math.random() * 3) + 1;
         
@@ -20,6 +11,9 @@ function getComputerChoice(random) {
 
 }
 
+const choice = prompt("Chose your fighter . . . rock, paper , scissors!").toLowerCase();
+const playerSelection = choice;
+const computerChoice = getComputerChoice();
 
 
 
@@ -36,8 +30,10 @@ function singleGame () {
         return "Hell yeah, you won bitch . . . Scissors beats paper muthafucka!";
     } else if ((playerSelection === "paper") && (computerChoice === "rock")) {
         return "Hell yeah, you won bitch . . . Paper beats rock muthafucka!";
-    } else ((playerSelection === "paper") && (computerChoice === "scissors")) 
+    } else  if ((playerSelection === "paper") && (computerChoice === "scissors")) {
         return "Damn you lost. . . Scissors beats paper buddy!"
+    }else 
+        return "Not a valid choice dummy!"
 }
 
 
