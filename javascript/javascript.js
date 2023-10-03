@@ -1,7 +1,13 @@
 
-const choice = prompt("Chose your fighter . . . rock, paper , scissors!").toLowerCase();
-const playerSelection = choice;
+let playerScore = 0;
+let computerScore = 0;
+
+
 const computerChoice = getComputerChoice();
+
+const playerWon = "Hell yeah, you won . . . ";
+const computerWon = "Damn you lost . . . ";
+const playersTied = "Damn yall tied . . . ";
 
 
 function getComputerChoice(random) {
@@ -16,24 +22,31 @@ function getComputerChoice(random) {
 
 }
 
+
+
 function singleGame () {
-    if (playerSelection === computerChoice) {
-        return "Damn yall tied . . . go ahead and kiss!";
-    } else if ((playerSelection === "rock") && (computerChoice === "paper")) {
-        return "Damn you lost. . . Paper beats rock buddy!";
-    } else if ((playerSelection === "rock") && (computerChoice === "scissors")) {
-        return "Hell yeah, you won bitch . . . Rock beats scissors muthafucka!";
-    } else if ((playerSelection === "scissors") && (computerChoice === "rock")) {
-        return "Damn you lost. . . Rock beats scissors buddy!";
-    } else if ((playerSelection === "scissors") && (computerChoice === "paper")) {
-        return "Hell yeah, you won bitch . . . Scissors beats paper muthafucka!";
-    } else if ((playerSelection === "paper") && (computerChoice === "rock")) {
-        return "Hell yeah, you won bitch . . . Paper beats rock muthafucka!";
-    } else  if ((playerSelection === "paper") && (computerChoice === "scissors")) {
-        return "Damn you lost. . . Scissors beats paper buddy!"
-    }else 
-        return "Not a valid choice dummy!"
+
+    var playerSelection = prompt("Chose your fighter . . . rock, paper , scissors!").toLowerCase();
+
+    if ((playerSelection === "rock") && (computerChoice === "scissors") || 
+    (playerSelection === "scissors") && (computerChoice === "paper") || 
+    (playerSelection === "paper") && (computerChoice === "rock"))  {
+
+        playerScore += 1;
+        return playerWon + playerSelection + " beat  " + computerChoice + ".";
+    } else if ( (playerSelection === "rock") && (computerChoice === "paper") ||
+     (playerSelection === "scissors") && (computerChoice === "rock") ||
+     (playerSelection === "paper") && (computerChoice === "scissors"))  {
+
+        computerScore += 1;
+        return computerWon + computerChoice + " beats " + playerSelection  + "."
+     } else  
+        return playersTied
+     
+
+
+
 }
 
 
-console.log(singleGame())
+
