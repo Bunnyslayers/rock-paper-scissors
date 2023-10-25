@@ -5,6 +5,9 @@ const computerWon = "Damn you lost . . . ";
 const playersTied = "Damn yall tied . . . ";
 
 
+var computerScore = 0;
+var playerScore = 0;
+
 
 
 
@@ -34,7 +37,7 @@ function singleGame () {
 
         playerScore++;
 
-        return (playerWon + playerSelection + " beat  " + computerChoice + ".");
+        return (playerWon + playerSelection + " beats  " + computerChoice + ".");
     } else if ( (playerSelection === "rock") && (computerChoice === "paper") ||
      (playerSelection === "scissors") && (computerChoice === "rock") ||
      (playerSelection === "paper") && (computerChoice === "scissors"))  {
@@ -50,9 +53,6 @@ function singleGame () {
 }
 
 
-
-var computerScore = 0;
-var playerScore = 0;
 
 for (i = 0; i <= 100; i++) {
     if ( computerScore === 5){ 
